@@ -1,0 +1,13 @@
+#mwce_sliderWrap {
+    margin: 0px 0px 0px 0px;
+    width: 100%;
+    height: 25px;
+    /*position: fixed;
+    top: 0px;
+    left: 0px;
+    */
+    
+    border: 1px solid red;
+    background-color: grey;
+    z-index: 10000;
+}

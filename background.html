@@ -34,5 +34,14 @@ chrome.tabs.onUpdated.addListener(function(tabId, changeInfo, tab) {
   }
 }); 
 
+
+chrome.extension.onRequest.addListener(
+  function(request, sender, sendResponse) {
+    if (request.command == "get_local"){
+        var url = chrome.extension.getURL(request.resource);
+        $.get(url, function(data){
+           sendResponse({data:data});
+        });
+    }});
 </script>
 </html>

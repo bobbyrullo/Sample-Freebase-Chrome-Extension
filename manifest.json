@@ -1,5 +1,5 @@
 {
-  "name": "Will Test",
+  "name": "Freebase Extension",
   "version":"1.0",
   "description": "A sample Freebase extension for Chrome. Lookup the current url in Freebase and show TopicBlocks if available.",
   "permissions": [
@@ -12,5 +12,14 @@
     "default_icon":"favicon.ico",
     "default_title":"Freebase Topic Blocks",
     "popup":"popup.html"
-  }
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://www.nytimes.com/*"],
+      "css": ["styles.css"],
+      "js": ["jquery.js",
+             "contentscript.js"]
+    }
+  ]
+
 }
